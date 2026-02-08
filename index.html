@@ -4,7 +4,34 @@
   <meta charset="UTF-8">
   <title>NetFlax Studio</title>
   <style>
-    body { background-color: #000; color: #fff; font-family: Arial, sans-serif; margin:0; }
+    body { 
+      background-color: #000; 
+      color: #fff; 
+      font-family: Arial, sans-serif; 
+      margin:0; 
+      overflow-y: scroll; /* mantiene el scroll vertical */
+    }
+
+    /* Scrollbar personalizado */
+    body::-webkit-scrollbar {
+      width: 6px; /* muy chiquita */
+    }
+    body::-webkit-scrollbar-track {
+      background: transparent; /* sin fondo */
+    }
+    body::-webkit-scrollbar-thumb {
+      background: rgba(128,128,128,0.5); /* gris difuminado */
+      border-radius: 10px; /* redondeado */
+      transition: background 0.3s ease;
+    }
+    body::-webkit-scrollbar-thumb:hover {
+      background: rgba(128,128,128,0.8); /* más visible al pasar el mouse */
+    }
+    /* Firefox */
+    body {
+      scrollbar-width: thin; /* más delgada */
+      scrollbar-color: rgba(128,128,128,0.5) transparent;
+    }
 
     /* Logo superior fijo */
     .logo-superior {
