@@ -31,10 +31,15 @@
       align-items:center;
       padding-top:20px;
       border-right:2px solid rgba(255,255,255,0.2);
-      transition: border-right 0.3s ease;
+      transition: all 0.3s ease;
       z-index:10;
     }
-    nav.sidebar:hover { border-right:2px solid #e50914; }
+    /* Difuminado al pasar el mouse */
+    nav.sidebar:hover {
+      border-right:2px solid #e50914;
+      backdrop-filter: blur(4px); /* efecto difuminado */
+      background: rgba(20,20,20,0.4); /* más transparente */
+    }
 
     nav.sidebar a {
       color:#999;
@@ -156,7 +161,7 @@
     <img src="lacasa-banner.jpg" alt="Banner La Casa de Papel" class="banner">
     <div class="banner-contenido">
       <span class="logoN">N</span><span class="tipo">SERIE</span>
-      <!-- Aquí cargamos la nueva imagen de texto -->
+      <!-- Imagen de texto -->
       <img src="lacasa-texto.jpg" alt="La Casa de Papel Texto" style="width:100%; height:auto; margin:10px 0;">
       <div class="descripcion">
         Ocho atracadores toman rehenes en la Fábrica Nacional de Moneda y Timbre española. 
@@ -172,7 +177,7 @@
   <div class="catalogo">
     <h2>Tendencias ahora</h2>
     <div class="fila">
-      <!-- ESTE ES UN SCRIPT DE IMAGEN DE "La Casa de Papel" -->
+      <!-- Portada ejemplo -->
       <div class="pelicula">
         <img src="lacasa.jpg" alt="La Casa de Papel">
         <div class="overlay">
